@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  change_app_package_name: ^1.0.0
   cupertino_icons: ^1.0.0
   flutter_bloc: ^6.1.2
   flutter_launcher_icons: ^0.9.0
@@ -35,10 +36,10 @@ dependencies:
   shared_preferences: ^2.0.5
   supercharged: ^1.12.0
 
-flutter_icons :
+flutter_icons:
   android: true
   ios: true
-  image_path : assets/logo_agritya.png
+  image_path: assets/logo_agritya.png
 
 dev_dependencies:
   flutter_test:
