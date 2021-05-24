@@ -6,6 +6,7 @@ import 'package:goblok_app/shared/shared.dart';
 import 'package:goblok_app/ui/widget/widget.dart';
 
 import '../../shared/shared.dart';
+import '../../shared/shared.dart';
 
 part 'main_page.dart';
 part 'home_page.dart';
