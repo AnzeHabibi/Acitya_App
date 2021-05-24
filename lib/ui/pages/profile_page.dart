@@ -35,6 +35,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text(
                           "see all",
                           style: blackFontStyle2.copyWith(
+                            color: mainColor,
                               fontSize: 12,
                               fontWeight: FontWeight.w200,
                               ),
