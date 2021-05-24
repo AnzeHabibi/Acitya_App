@@ -99,16 +99,11 @@ class _SignInPageState extends State<SignInPage> {
                                 color: Color(0xFF424874),
                                 fontWeight: FontWeight.w400),
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              Get.to(SignUpPage);
-                            },
-                            child: Text(
-                              "Sign Up",
-                              style: TextStyle(
-                                  color: Color(0xFF424874),
-                                  fontWeight: FontWeight.w700),
-                            ),
+                          Text(
+                            "Sign Up",
+                            style: TextStyle(
+                                color: Color(0xFF424874),
+                                fontWeight: FontWeight.w700),
                           )
                         ],
                       ),

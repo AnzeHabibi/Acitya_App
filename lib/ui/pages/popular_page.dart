@@ -24,10 +24,10 @@ class _PopularPageState extends State<PopularPage> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.pop(context);
+                      Get.to(MainPage());
                     },
                     child: Padding(
-                      padding: EdgeInsets.fromLTRB(16, 16, 16, 0),
+                      padding: EdgeInsets.fromLTRB(24, 16, 24, 0),
                       child: Row(
                         children: [
                           Container(
@@ -64,23 +64,24 @@ class _PopularPageState extends State<PopularPage> {
                             Column(
                               children: [
                                 Container(
-                                  height: 840,
-                child: ListView.builder(
-                  scrollDirection: Axis.vertical,
-                    itemBuilder: (context, index) {
-                      final Popular popular = mockPopulars[index];
-                      return GestureDetector(
-                        onTap: () {
-                          Get.to(DetailPage(popular: popular));
-                        },
-                        child: 
-                        Column(
-                          children: [
-                            PopularCard2(popular)
-                          ],
-                        ),
-                      );
-                    }, itemCount: mockPopulars.length,)),
+                                    height: 840,
+                                    child: ListView.builder(
+                                      scrollDirection: Axis.vertical,
+                                      itemBuilder: (context, index) {
+                                        final Popular popular =
+                                            mockPopulars[index];
+                                        return GestureDetector(
+                                          onTap: () {
+                                            Get.to(
+                                                DetailPage(popular: popular));
+                                          },
+                                          child: Column(
+                                            children: [PopularCard2(popular)],
+                                          ),
+                                        );
+                                      },
+                                      itemCount: mockPopulars.length,
+                                    )),
                               ],
                             ),
                           ],

@@ -50,7 +50,7 @@ class ProfileCard extends StatelessWidget {
                         Text(
                           emailController.text,
                           style: blackFontStyle3.copyWith(
-                              fontSize: 16, color: Colors.grey),
+                              fontSize: 16, color: Colors.grey, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(height: 16),
                         Row(

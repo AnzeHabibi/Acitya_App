@@ -1,6 +1,5 @@
 part of 'page.dart';
 
-
 class UXPage extends StatefulWidget {
   @override
   _UXPageState createState() => _UXPageState();
@@ -25,10 +24,10 @@ class _UXPageState extends State<UXPage> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.pop(context);
+                      Get.to(MainPage());
                     },
                     child: Padding(
-                      padding: EdgeInsets.fromLTRB(16, 16, 16, 0),
+                      padding: EdgeInsets.fromLTRB(24, 16, 24, 0),
                       child: Row(
                         children: [
                           Container(
@@ -65,23 +64,22 @@ class _UXPageState extends State<UXPage> {
                             Column(
                               children: [
                                 Container(
-                                  height: 840,
-                child: ListView.builder(
-                  scrollDirection: Axis.vertical,
-                    itemBuilder: (context, index) {
-                      final UX ux = mockUXs[index];
-                      return GestureDetector(
-                        onTap: () {
-                          Get.to(DetailPageUX(ux: ux));
-                        },
-                        child: 
-                        Column(
-                          children: [
-                            UXCard2(ux)
-                          ],
-                        ),
-                      );
-                    }, itemCount: mockPopulars.length,)),
+                                    height: 840,
+                                    child: ListView.builder(
+                                      scrollDirection: Axis.vertical,
+                                      itemBuilder: (context, index) {
+                                        final UX ux = mockUXs[index];
+                                        return GestureDetector(
+                                          onTap: () {
+                                            Get.to(DetailPageUX(ux: ux));
+                                          },
+                                          child: Column(
+                                            children: [UXCard2(ux)],
+                                          ),
+                                        );
+                                      },
+                                      itemCount: mockPopulars.length,
+                                    )),
                               ],
                             ),
                           ],

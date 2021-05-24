@@ -21,11 +21,14 @@ class LandingPage extends StatelessWidget {
                         fit: BoxFit.cover)),
               ),
               SizedBox(height: 24),
-              Text("Upgrade your skill",
-                  style: whiteFontStyle.copyWith(
-                      fontSize: 28, fontWeight: FontWeight.w500)),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(24, 0, 24, 0),
+                child: Text("Lets Read",
+                    style: whiteFontStyle.copyWith(
+                        fontSize: 32, fontWeight: FontWeight.w900)),
+              ),
               SizedBox(height: 6),
-              Text("By studying here, you can discover\nyour hidden skill!",
+              Text("By Reading here, you can discover\nyour hidden skill!",
                   style: whiteFontStyle.copyWith(
                     color: Color(0xffE5E3E6),
                     fontSize: 16,

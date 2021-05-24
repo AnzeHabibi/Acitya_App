@@ -6,7 +6,6 @@ class FilmPage extends StatefulWidget {
 }
 
 class _FilmPageState extends State<FilmPage> {
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,10 +24,10 @@ class _FilmPageState extends State<FilmPage> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.pop(context);
+                      Get.to(MainPage());
                     },
                     child: Padding(
-                      padding: EdgeInsets.fromLTRB(16, 16, 16, 0),
+                      padding: EdgeInsets.fromLTRB(24, 16, 24, 0),
                       child: Row(
                         children: [
                           Container(
@@ -65,23 +64,22 @@ class _FilmPageState extends State<FilmPage> {
                             Column(
                               children: [
                                 Container(
-                                  height: 840,
-                child: ListView.builder(
-                  scrollDirection: Axis.vertical,
-                    itemBuilder: (context, index) {
-                      final Film film = mockFilms[index];
-                      return GestureDetector(
-                        onTap: () {
-                          Get.to(DetailPageFilm(film: film));
-                        },
-                        child: 
-                        Column(
-                          children: [
-                            FilmCard2(film)
-                          ],
-                        ),
-                      );
-                    }, itemCount: mockPopulars.length,)),
+                                    height: 840,
+                                    child: ListView.builder(
+                                      scrollDirection: Axis.vertical,
+                                      itemBuilder: (context, index) {
+                                        final Film film = mockFilms[index];
+                                        return GestureDetector(
+                                          onTap: () {
+                                            Get.to(DetailPageFilm(film: film));
+                                          },
+                                          child: Column(
+                                            children: [FilmCard2(film)],
+                                          ),
+                                        );
+                                      },
+                                      itemCount: mockPopulars.length,
+                                    )),
                               ],
                             ),
                           ],
